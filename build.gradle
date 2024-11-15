@@ -105,8 +105,8 @@ dependencies {
     // For all intends and purposes: You can treat this dependency as if it is a normal library you would use.
     implementation "net.neoforged:neoforge:${neo_version}"
 
-    implementation "com.goldfish:goldfishmod02tastyfurniture:${tastyfurniture_version_range}"
-    implementation "local.libs:productivetrees:${productive_trees_version_range}"
+    compileOnly "com.goldfish:goldfishmod02tastyfurniture:${tastyfurniture_version_range}"
+    compileOnly "local.libs:productivetrees:${productive_trees_version_range}"
     // Example optional mod dependency with JEI
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime
     // compileOnly "mezz.jei:jei-${mc_version}-common-api:${jei_version}"

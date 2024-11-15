@@ -16,7 +16,7 @@ public class GM3ItemModelDatagen extends ItemModelProvider {
     }
 
     protected void buildMushItemModels() {
-        withExistingParent("elderberry_mush", mcLoc("item/generated")).texture("layer0", "item/elderberry_mush");
+        withExistingParent("elderberry_mush", mcLoc("item/generated")).texture("layer0", "goldfishmod03productivefurniture:item/elderberry_mush");
     }
     
 }
