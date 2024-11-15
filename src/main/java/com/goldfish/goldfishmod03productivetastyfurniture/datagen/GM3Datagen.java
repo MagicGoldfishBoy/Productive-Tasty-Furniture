@@ -22,17 +22,17 @@ public class GM3Datagen {
     public static void gatherData(GatherDataEvent event) {
         
         //Blockstates
-        try {
-        DataGenerator generator = event.getGenerator();
-        PackOutput output = generator.getPackOutput();
-        ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
-            generator.addProvider(
-                event.includeClient(),
-                new GM1BlockStateProvider(output, "goldfishmod03productivetastyfurniture", existingFileHelper));
+        // try {
+        // DataGenerator generator = event.getGenerator();
+        // PackOutput output = generator.getPackOutput();
+        // ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
+        //     generator.addProvider(
+        //         event.includeClient(),
+        //         new GM1BlockStateProvider(output, "goldfishmod03productivetastyfurniture", existingFileHelper));
                 
-        } catch (RuntimeException e) {
-            LOGGER.error("failed to generate blockstates");
-        }
+        // } catch (RuntimeException e) {
+        //     LOGGER.error("failed to generate blockstates");
+        // }
 
         //Item Models
         try {
@@ -42,24 +42,24 @@ public class GM3Datagen {
 
         generator.addProvider(
             event.includeClient(),
-            new GM1ItemModelProvider(output, "goldfishmod03productivetastyfurniture", existingFileHelper));
+            new GM3ItemModelDatagen(output, "goldfishmod03productivetastyfurniture", existingFileHelper));
             
         } catch (Exception e) {
             LOGGER.error("failed to generate item models");
         }
 
         //Recipes
-        try {
-            DataGenerator generator = event.getGenerator();
-            PackOutput output = generator.getPackOutput();
-            CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
+        // try {
+        //     DataGenerator generator = event.getGenerator();
+        //     PackOutput output = generator.getPackOutput();
+        //     CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
             
-            generator.addProvider(
-                event.includeServer(),
-                new GM1RecipeProviderConcrete(output, lookupProvider));
+        //     generator.addProvider(
+        //         event.includeServer(),
+        //         new GM1RecipeProviderConcrete(output, lookupProvider));
           
-        } catch (Exception e) {
-            LOGGER.error("failed to generate recipes");
-        }         
+        // } catch (Exception e) {
+        //     LOGGER.error("failed to generate recipes");
+        // }         
  }
 }

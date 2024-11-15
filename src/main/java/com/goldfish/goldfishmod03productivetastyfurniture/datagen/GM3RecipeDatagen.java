@@ -15,4 +15,5 @@ import net.minecraft.core.HolderLookup.Provider;
     public GM3RecipeDatagen(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider) {
         super(output, lookupProvider);
     }
+    
 }
