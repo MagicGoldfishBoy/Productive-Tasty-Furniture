@@ -22,5 +22,7 @@ eclipse
 run
 runs
 run-data
-
 repo
+libs/productivetrees-1.21.0-0.4.1.jar
+libs/productivetrees-1.21.1-0.5.6.jar
+libs/goldfishmod02tastyfurniture-21.3.0.jar
