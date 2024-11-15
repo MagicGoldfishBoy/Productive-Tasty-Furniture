@@ -38,15 +38,10 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 @Mod(ProductiveTastyFurniture.MODID)
 public class ProductiveTastyFurniture
 {
-    // Define mod id in a common place for everything to reference
     public static final String MODID = "goldfishmod03productivetastyfurniture";
-    // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
-    // Create a Deferred Register to hold Blocks which will all be registered under the "examplemod" namespace
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(MODID);
-    // Create a Deferred Register to hold Items which will all be registered under the "examplemod" namespace
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(MODID);
-    // Create a Deferred Register to hold CreativeModeTabs which will all be registered under the "examplemod" namespace
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
 
     // Creates a new Block with the id "examplemod:example_block", combining the namespace and path
@@ -60,7 +55,7 @@ public class ProductiveTastyFurniture
 
     // Creates a creative tab with the id "examplemod:example_tab" for the example item, that is placed after the combat tab
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> EXAMPLE_TAB = CREATIVE_MODE_TABS.register("example_tab", () -> CreativeModeTab.builder()
-            .title(Component.translatable("itemGroup.examplemod")) //The language key for the title of your CreativeModeTab
+            .title(Component.translatable("itemGroup.productivetastyfurniture")) //The language key for the title of your CreativeModeTab
             .withTabsBefore(CreativeModeTabs.COMBAT)
             .icon(() -> EXAMPLE_ITEM.get().getDefaultInstance())
             .displayItems((parameters, output) -> {
